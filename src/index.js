@@ -17,6 +17,7 @@ import { ObjectBinding } from './Components/data-binding/object-binding.jsx';
 import { TableBinding } from './Components/data-binding/table-binding.jsx';
 import { NestedBinding } from './Components/data-binding/nested-binding.jsx';
 import { DateBinding } from './Components/data-binding/date-binding.jsx';
+import { ToDo } from './To-Do.jsx';
 
 
 
@@ -24,7 +25,7 @@ import { DateBinding } from './Components/data-binding/date-binding.jsx';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DateBinding/>
+    <ToDo/>
   </React.StrictMode>
 );
 
