@@ -1,31 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
-import { ContextDemo } from './Components/Context-Demo.js';
-import { Level1 } from './Components/Demo.jsx';
-import { Home } from './home/home.jsx';
-import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
-import bootstrap from 'bootstrap';
-import { DataBinding } from './Components/data-binding/data-binding.jsx';
-import { ObjectBinding } from './Components/data-binding/object-binding.jsx';
-import { TableBinding } from './Components/data-binding/table-binding.jsx';
-import { NestedBinding } from './Components/data-binding/nested-binding.jsx';
-import { DateBinding } from './Components/data-binding/date-binding.jsx';
-import { ToDo } from './To-Do.jsx';
-
-
-
+import AppTheme from './StateManagement/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ToDo/>
+    <AppTheme/>
   </React.StrictMode>
 );
 
