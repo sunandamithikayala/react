@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';
 import AppTheme from './StateManagement/App';
+import AuthForm from './Form/Form';
+import TodoApp from './Components/ToDoList/TodoList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppTheme/>
+    <TodoApp/>
   </React.StrictMode>
 );
 
