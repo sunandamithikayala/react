@@ -1,0 +1,51 @@
+/* src/routing/Route.css */
+
+/* Global Styles */
+.container-fluid {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  /* Navigation Styling */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav div {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  /* Page Content */
+  section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Image Styling */
+  img {
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
