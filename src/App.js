@@ -1,26 +1,25 @@
-// src/App.js
- 
-import React, { useState } from 'react';
- 
-function App() {
+import React, { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Login from "./hooks/Login";
+import Catalog from "./catalog/catalog";
 
-  const [count, setCount] = useState(0);
- 
-  const increment = () => setCount(count + 1);
+const App = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const decrement = () => setCount(count - 1);
- 
+  // Function to update authentication state
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
-<div>
-<h1>Counter: {count}</h1>
-<button onClick={increment}>Increment</button>
-<button onClick={decrement}>Decrement</button>
-</div>
-
+    <Routes>
+      <Route path="/" element={<Login onLogin={handleLogin} />} />
+      <Route
+        path="/catalog"
+        element={isAuthenticated ? <Catalog /> : <Navigate to="/" />}
+      />
+    </Routes>
   );
+};
 
-}
- 
 export default App;
-
- 
