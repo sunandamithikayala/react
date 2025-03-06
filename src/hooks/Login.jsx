@@ -54,4 +54,5 @@ const Login = ({ onLogin }) => {
   );
 };
 
+// Ensure default export if importing without braces
 export default Login;
