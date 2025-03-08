@@ -7,8 +7,7 @@ const GreetingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGreeting(`Hello, ${name}!`);
-
+    setGreeting(`Hello, ${name}!`); // ✅ Fixed syntax
   };
 
   return (
@@ -28,4 +27,4 @@ const GreetingForm = () => {
   );
 };
 
-export default GreetingForm;
+export default GreetingForm;

@@ -1,25 +1,13 @@
-import React, { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./hooks/Login";
-import Catalog from "./catalog/catalog";
+import React from "react";
+import DragAndDropList from "./DragAndDrop/DragAndDrop"; // Ensure the path is correct
 
-const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  // Function to update authentication state
-  const handleLogin = () => {
-    setIsAuthenticated(true);
-  };
-
+function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login onLogin={handleLogin} />} />
-      <Route
-        path="/catalog"
-        element={isAuthenticated ? <Catalog /> : <Navigate to="/" />}
-      />
-    </Routes>
+    <div className="App">
+      <h1 className="text-center fs-2 p-2 my-2 bg-secondary text-white">My Drag and Drop Project</h1>
+      <DragAndDropList />
+    </div>
   );
-};
+}
 
-export default App;
+export default App;
