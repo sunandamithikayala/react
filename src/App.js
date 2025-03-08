@@ -1,65 +1,55 @@
-import React, { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import Login from "./hooks/Login";        // Login component in src/hooks/Login.jsx
-import Catalog from "./catalog/catalog";    // Catalog component in src/catalog/catalog.jsx
-import Cart from "./cart/cart";             // Cart component in src/cart/cart.jsx
-import Payment from "./payment/payment";    // Payment component in src/payment/payment.jsx
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "./ThemeLazy/styles.css";
 
-function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
+const Home = () => (
+  <div className="page home">
+    <h1>Welcome to the Home Page!</h1>
+    <p>This is a dynamic React application.</p>
+  </div>
+);
 
-  // Handle login success
-  const handleLogin = () => {
-    setIsAuthenticated(true);
-  };
+const About = () => (
+  <div className="about-container">
+    <h1>About Us</h1>
+    <p>This page contains information about our app.</p>
+  </div>
+);
 
-  // Handle logout
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    setCartItems([]); // Optionally clear cart on logout
-  };
+const Contact = () => (
+  <div className="page contact">
+    <h1>Contact Us</h1>
+    <p>Reach out to us anytime!</p>
+  </div>
+);
 
-  // Add product to cart
-  const handleAddToCart = (item) => {
-    setCartItems([...cartItems, item]);
-  };
+const NotFound = () => (
+  <div className="page">
+    <h1>404 - Page Not Found</h1>
+    <p>Sorry, the page you're looking for doesn't exist.</p>
+  </div>
+);
 
-  // Clear the cart
-  const handleClearCart = () => {
-    setCartItems([]);
-  };
-
+const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Login onLogin={handleLogin} />} />
-      <Route
-        path="/catalog"
-        element={
-          isAuthenticated ? (
-            <Catalog onLogout={handleLogout} onAddToCart={handleAddToCart} />
-          ) : (
-            <Navigate to="/" />
-          )
-        }
-      />
-      <Route
-        path="/cart"
-        element={
-          isAuthenticated ? (
-            <Cart cartItems={cartItems} onClearCart={handleClearCart} />
-          ) : (
-            <Navigate to="/" />
-          )
-        }
-      />
-      <Route
-        path="/payment"
-        element={isAuthenticated ? <Payment /> : <Navigate to="/" />}
-      />
-      <Route path="*" element={<div><h4>404: Not Found</h4></div>} />
-    </Routes>
+    <Router>
+      <nav className="navbar">
+        <ul className="nav-links">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
