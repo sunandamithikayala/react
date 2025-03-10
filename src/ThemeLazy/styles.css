@@ -1,25 +1,77 @@
+/* about.css */
 .aboutpage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: 50px;
-  background-color: #0a1c1d;
-  border-radius: 10px;
-  margin: 20px auto;
-  width: 60%;
- 
-  margin-top: 200px;
-  background-color: rgb(1, 46, 72);
-
+  font-family: Arial, sans-serif;
 }
 
-.aboutpage h1 {
-  color:white;
-  font-size: 2em;
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.aboutpage p {
-  color: #666;
-  font-size: 1.2em;
+.about-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
 }
+
+.about-content h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #222;
+}
+
+.about-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-content ul li {
+  font-size: 1.1rem;
+  background: #f8f8f8;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 5px solid #007bff;
+}
+
+.about-content h3 {
+  font-size: 1.8rem;
+  color: #28a745;
+  margin-top: 20px;
+}
+
+/* Image Styling */
+.about-image {
+  flex: 1;
+  min-width: 250px;
+  min-height: 400px; /* Adjust height based on content */
+  object-fit: cover;
+}
+
+
+.left {
+  margin-right: 20px;
+}
+
+.right {
+  margin-left: 20px;
+}
+
 
   
   .home {
@@ -39,7 +91,7 @@
     align-items: flex-start;
     padding: 20px;
     background-image: url("/public/images/contact.png");
-
+   height:100vh ;
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 30px;
@@ -229,4 +281,189 @@
 .not-found-container p {
   font-size: 1.2rem;
   color: #555;
+}
+.page-home{
+  text-align: center;
+  margin-top: 50px;
+}
+.carousel-item img {
+  height: 500px; /* Adjust height as needed */
+  object-fit: cover;
+}
+.not-found {
+  text-align: center;
+  padding: 50px;
+  height: 100vh;
+}
+
+.not-found-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+/* SignUp.css */
+.signup-page {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #218838;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ff0000;
+}
+/* login.css */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.auth-page h1 {
+  margin-bottom: 20px;
+}
+
+.auth-page input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-page button {
+  width: 250px;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-page button:hover {
+  background-color: #218838;
+}
+
+.auth-page p {
+  margin-top: 10px;
+}
+
+.auth-page a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.auth-page a:hover {
+  text-decoration: underline;
+}
+
+/* signup.css */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eef2f3;
+  border: 2px solid #121111;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.auth-page h1 {
+  margin-bottom: 20px;
+}
+
+.auth-page input {
+  width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-page button {
+  width: 250px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-page button:hover {
+  background-color: #0056b3;
+}
+
+.auth-page p {
+  margin-top: 10px;
+}
+
+.auth-page a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+.auth-page a:hover {
+  text-decoration: underline;
 }
