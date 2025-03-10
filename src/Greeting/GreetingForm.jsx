@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./GreetingForm.css";
 
@@ -8,8 +7,7 @@ const GreetingForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setGreeting(`Hello, ${name}!`);
-
+    setGreeting(`Hello, ${name}!`); // ✅ Fixed syntax
   };
 
   return (

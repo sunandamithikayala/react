@@ -1,4 +1,3 @@
-
 import { Link, Route, Routes } from 'react-router-dom';
 import Login from '../hooks/Login';
 import './Route.css'; // Import the new CSS file
