@@ -1,0 +1,55 @@
+.catalog-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.product-grid {
+  display: grid;
+  /* 
+     `repeat(auto-fit, minmax(220px, 1fr))` 
+     ensures the grid is responsive, with a minimum card width of 220px.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center; /* Centers each card in its column */
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* Use Flex to neatly stack elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Fix the card width to ensure consistency */
+  width: 220px;
+}
+
+.product-image {
+  /* Fixed dimensions for consistent display */
+  width: 180px;
+  height: 220px;
+  object-fit: cover;  /* Crops the image to fill the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Button styling (if you use .btn classes) */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
